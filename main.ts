@@ -1,5 +1,6 @@
 scene.setBackgroundColor(3)
-let mySprite = sprites.create(img`
+game.splash("Hi!")
+let monkey = sprites.create(img`
     . . . . f f f f f . . . . . . . 
     . . . f e e e e e f . . . . . . 
     . . f d d d d e e e f . . . . . 
@@ -17,4 +18,7 @@ let mySprite = sprites.create(img`
     . . . f d d c d d b b d f . . . 
     . . . . f f f f f f f f f . . . 
     `, SpriteKind.Player)
-mySprite.sayText("Hello " + game.askForString("What's your name?", 4))
+monkey.sayText("Hello " + game.askForString("What's your name?", 4))
+game.showLongText("yeah", DialogLayout.Bottom)
+monkey.sayText("Of course!" + game.askForNumber("What's your fave number?"))
+info.setScore(game.askForNumber("What's your fave number?"))
