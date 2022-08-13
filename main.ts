@@ -21,8 +21,10 @@ let monkey = sprites.create(img`
 monkey.sayText("Hello " + game.askForString("What's your name?", 4))
 game.showLongText("(Click on A, yeah!)", DialogLayout.Bottom)
 info.setScore(game.askForNumber("What's your fave number?", 1))
-monkey.sayText("Of course!" + "That's the score!")
+monkey.sayText("Of course!" + "That's the score!", 2000, false)
 game.showLongText("(Click on A again, yeah!)", DialogLayout.Bottom)
-while (game.ask("Yes or No?")) {
-    monkey.startEffect(effects.spray)
+if (game.ask("Yes (A) or No (B)?")) {
+    monkey.startEffect(effects.spray, 2000)
+} else {
+    monkey.destroy(effects.fire, 2000)
 }
