@@ -19,6 +19,6 @@ let monkey = sprites.create(img`
     . . . . f f f f f f f f f . . . 
     `, SpriteKind.Player)
 monkey.sayText("Hello " + game.askForString("What's your name?", 4))
-game.showLongText("yeah", DialogLayout.Bottom)
-monkey.sayText("Of course!" + game.askForNumber("What's your fave number?"))
+game.showLongText("(Click on A, yeah!)", DialogLayout.Bottom)
 info.setScore(game.askForNumber("What's your fave number?"))
+monkey.sayText("Of course!" + "That's the score!")
