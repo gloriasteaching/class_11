@@ -17,4 +17,4 @@ let mySprite = sprites.create(img`
     . . . f d d c d d b b d f . . . 
     . . . . f f f f f f f f f . . . 
     `, SpriteKind.Player)
-mySprite.sayText(game.askForString("What's your name?"))
+mySprite.sayText("Hello " + game.askForString("What's your name?", 4))
